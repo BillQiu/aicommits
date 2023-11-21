@@ -33,7 +33,8 @@
 		"*.ts": "eslint --cache"
 	},
 	"dependencies": {
-		"@dqbd/tiktoken": "^1.0.2"
+		"@dqbd/tiktoken": "^1.0.2",
+		"node-fetch": "^3.3.2"
 	},
 	"devDependencies": {
 		"@clack/prompts": "^0.6.1",
