@@ -14,19 +14,17 @@
 	"files": [
 		"dist"
 	],
+	"lint-staged": {
+		"*.ts": ""
+	},
 	"bin": {
 		"aicommits": "./dist/cli.mjs",
 		"aic": "./dist/cli.mjs"
 	},
 	"scripts": {
 		"build": "pkgroll --minify",
-		"lint": "eslint --cache .",
-		"type-check": "tsc",
 		"test": "tsx tests",
 		"prepack": "pnpm build && clean-pkg-json"
-	},
-	"lint-staged": {
-		"*.ts": "eslint --cache"
 	},
 	"dependencies": {
 		"@dqbd/tiktoken": "^1.0.2",
@@ -46,11 +44,10 @@
 		"https-proxy-agent": "^5.0.1",
 		"ini": "^3.0.1",
 		"kolorist": "^1.7.0",
-		"lint-staged": "^13.1.2",
+		"lint-staged": "^15.1.0",
 		"manten": "^0.7.0",
 		"openai": "^3.2.1",
 		"pkgroll": "^1.9.0",
-		"simple-git-hooks": "^2.8.1",
 		"tsx": "^3.12.3",
 		"typescript": "^4.9.5"
 	},
@@ -72,10 +69,5 @@
 		"branches": [
 			"main"
 		]
-	},
-	"pnpm": {
-		"patchedDependencies": {
-			"@clack/prompts@0.6.1": "patches/@clack__prompts@0.6.1.patch"
-		}
 	}
 }
